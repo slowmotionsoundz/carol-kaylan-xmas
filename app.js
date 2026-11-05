@@ -7,11 +7,10 @@ var TRIP = {
   end:   '2026-12-27T23:59:59+01:00',
   stops: [
     { mode: 'Arrival',  name: 'Copenhagen Airport', when: 'Dec 23', detail: 'Carol and Kaylan land from Huntsville. Cory meets them at arrivals with the van - no trains, no transfers, bags straight in.' },
-    { mode: 'Van · ~35 min', name: 'Vedbæk', when: 'Dec 23-24', detail: 'Two nights by the water at Hotel Marina (or a Copenhagen city hotel). Quiet coast, easy evenings, Tivoli on the first night.' },
-    { mode: 'Van · ~30 min', name: 'Helsingør', when: 'Dec 25', detail: 'Up the coast road past Louisiana to Helsingør, where Kronborg castle - Hamlet\u2019s castle - stands over the harbor.' },
-    { mode: 'Ferry · 20 min', name: 'The Øresund crossing', when: 'Dec 25', detail: 'The van boards the Øresundslinjen ferry - Cory\u2019s clip card covers the car. Coffee on deck while Sweden appears ahead. Elevators between decks, seats by the window.' },
-    { mode: 'Van · ~25 min', name: 'Helsingborg', when: 'Dec 25', detail: 'Land in Sweden at Helsingborg, where the hotel (Elite Marina Plaza) sits steps from the berth. Optional night here, or straight on.' },
-    { mode: 'Van · ~25 min', name: 'Landskrona', when: 'Dec 25-27', detail: 'Home base with the family: Christmas table, day trips to Lund or Malmö, and on the 27th the van runs door to departures at CPH (~55 min over the bridge).' }
+    { mode: 'Van \u00b7 ~20 min', name: 'Copenhagen', when: 'Dec 23-24', detail: 'Two nights at one hotel in the city, near Tivoli. Christmas market on the first evening, everything close and flat.' },
+    { mode: 'Van \u00b7 ~50 min', name: 'Helsing\u00f8r', when: 'Dec 25', detail: 'Up the coast road past Louisiana to Helsing\u00f8r, where Kronborg castle - Hamlet\u2019s castle - stands over the harbor.' },
+    { mode: 'Ferry \u00b7 20 min', name: 'The \u00d8resund crossing', when: 'Dec 25', detail: 'The van boards the \u00d8resundslinjen ferry - Cory\u2019s clip card covers the car. Coffee on deck while Sweden appears ahead. Elevators between decks, seats by the window.' },
+    { mode: 'Steps away', name: 'Helsingborg', when: 'Dec 25-27', detail: 'Land in Sweden and the hotel is right at the terminal - one hotel for both Swedish nights. Family in Landskrona is ~25 minutes away in the van; on the 27th the van runs door to departures at CPH (~1 hr 10 over the bridge).' }
   ]
 };
 /* ========================================================================== */
