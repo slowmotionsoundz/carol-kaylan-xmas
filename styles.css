@@ -31,7 +31,7 @@ a{color:inherit}
 
 /* cover */
 #cover{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:var(--cream)}
-.cover-photo{position:absolute;inset:0;background:url('tivoli.jpg') center 62%/cover no-repeat;transform:scale(1.06);animation:drift 26s ease-in-out infinite alternate}
+.cover-photo{position:absolute;inset:0;background:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Christmas_market_at_Tivoli%2C_Copenhagen_%2823309041893%29.jpg/1920px-Christmas_market_at_Tivoli%2C_Copenhagen_%2823309041893%29.jpg') center 62%/cover no-repeat;transform:scale(1.06);animation:drift 26s ease-in-out infinite alternate}
 @keyframes drift{from{transform:scale(1.06) translateY(0)}to{transform:scale(1.12) translateY(-16px)}}
 .cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,15,.42) 0%,rgba(10,18,15,.18) 42%,rgba(10,18,15,.82) 100%)}
 .cover-inner{position:relative;width:100%;max-width:1080px;margin:0 auto;padding:120px 24px 64px}
