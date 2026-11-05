@@ -16,11 +16,11 @@ a{color:inherit}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 /* nav */
-#topnav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;color:var(--cream);text-shadow:0 1px 3px rgba(5,10,8,.9),0 2px 14px rgba(5,10,8,.6);transition:background .35s,color .35s,box-shadow .35s}
-#topnav.solid{background:rgba(247,242,233,.92);color:var(--ink);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(19,31,27,.08)}
+#topnav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;color:var(--cream);text-shadow:0 1px 2px rgba(5,10,8,.45);transition:background .35s,color .35s,box-shadow .35s,text-shadow .35s}
+#topnav.solid{background:rgba(247,242,233,.94);color:var(--ink);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(19,31,27,.08);text-shadow:none}
 #topnav .brand{font-family:var(--serif);font-size:18px;text-decoration:none;letter-spacing:.02em}
 #topnav .brand span{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:.14em;opacity:.75;margin-left:6px}
-#topnav .links{display:flex;gap:18px;font-size:12.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+#topnav .links{display:flex;gap:18px;font-size:12.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;-webkit-font-smoothing:antialiased}
 #topnav .links a{text-decoration:none;opacity:.8;transition:opacity .2s;padding:6px 0}
 #topnav .links a:hover{opacity:1}
 #progress{position:absolute;left:0;bottom:0;height:2px;background:var(--gold);width:0}
