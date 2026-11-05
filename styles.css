@@ -125,3 +125,4 @@ footer .fine{margin-top:10px;font-size:12px;letter-spacing:.1em;text-transform:u
   .day,.sheet{padding:72px 20px}
   .stop{flex:1 1 45%}
 }
+.stay-body a{color:var(--gold);font-weight:500}
