@@ -6,11 +6,11 @@ var TRIP = {
   start: '2026-12-23T00:00:00+01:00',
   end:   '2026-12-27T23:59:59+01:00',
   stops: [
-    { mode: 'Arrival',  name: 'Copenhagen Airport', when: 'Dec 23', detail: 'Carol and Kaylan land from Huntsville. Cory meets them at arrivals with the van - no trains, no transfers, bags straight in.' },
-    { mode: 'Van \u00b7 ~20 min', name: 'Copenhagen', when: 'Dec 23-24', detail: 'Two nights at one hotel in the city, near Tivoli. Christmas market on the first evening, everything close and flat.' },
+    { mode: 'Arrival',  name: 'Copenhagen Airport', when: 'Dec 24 · 11:45', detail: 'Icelandair, overnight from Nashville (out Dec 23 at 17:30, in Dec 24 at 11:45). Cory meets them at arrivals with the van - no trains, no transfers, bags straight in.' },
+    { mode: 'Van \u00b7 ~20 min', name: 'Copenhagen', when: 'Dec 24', detail: 'One night at one hotel in the city, everything close and flat. Christmas Eve dinner with the family tonight; Tivoli\u2019s market reopens on the 25th.' },
     { mode: 'Van \u00b7 ~50 min', name: 'Helsing\u00f8r', when: 'Dec 25', detail: 'Up the coast road past Louisiana to Helsing\u00f8r, where Kronborg castle - Hamlet\u2019s castle - stands over the harbor.' },
     { mode: 'Ferry \u00b7 20 min', name: 'The \u00d8resund crossing', when: 'Dec 25', detail: 'The van boards the \u00d8resundslinjen ferry - Cory\u2019s clip card covers the car. Coffee on deck while Sweden appears ahead. Elevators between decks, seats by the window.' },
-    { mode: 'Steps away', name: 'Helsingborg', when: 'Dec 25-27', detail: 'Land in Sweden and the hotel is right at the terminal - one hotel for both Swedish nights. Family in Landskrona is ~25 minutes away in the van; on the 27th the van runs door to departures at CPH (~1 hr 10 over the bridge).' }
+    { mode: 'Steps away', name: 'Helsingborg', when: 'Dec 25-27', detail: 'Land in Sweden and the hotel is right at the terminal - one hotel for both Swedish nights. Family in Landskrona is ~25 minutes away in the van; on the 27th the van leaves about 03:30 for the 06:25 flight, door to departures at CPH (~1 hr 10 over the bridge).' }
   ]
 };
 /* ========================================================================== */
@@ -47,12 +47,12 @@ var TRIP = {
       var d = Math.floor(ms / 86400000);
       var h = Math.floor(ms % 86400000 / 3600000);
       var m = Math.floor(ms % 3600000 / 60000);
-      cd.innerHTML = '<span class="lbl">Until Carol &amp; Kaylan land</span>' +
+      cd.innerHTML = '<span class="lbl">Until Carol &amp; Kaylan fly</span>' +
         d + (d === 1 ? ' day ' : ' days ') + h + ' hours ' + m + ' minutes';
       document.querySelectorAll('.today-tag').forEach(function(t){ t.classList.remove('on'); });
     } else if (now <= end) {
       var dayNum = Math.floor((now - start) / 86400000) + 1;
-      var names = ['Arrival in Copenhagen','Christmas Eve','The crossing','Sweden day','Homeward'];
+      var names = ['The flight over','Arrival · Christmas Eve','The crossing','Sweden day','Homeward'];
       cd.innerHTML = '<span class="lbl">Right now</span>Day ' + dayNum + ' of 5 · ' + names[dayNum-1];
       document.querySelectorAll('.today-tag').forEach(function(t){
         t.classList.toggle('on', now.getDate() === +t.getAttribute('data-day') && now.getMonth() === 11);
