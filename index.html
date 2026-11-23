@@ -3,222 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carol &amp; Kaylan — Christmas on the Øresund</title>
-<meta name="description" content="A Christmas journey for Carol and Kaylan: December 23-27, 2026. One night in Denmark, the ferry across the Øresund, two nights in Sweden.">
+<title>Carol &amp; Kaylan — Christmas on the Sound</title>
+<meta name="description" content="A Christmas journey for Carol and Kaylan: December 23-27, 2026. Copenhagen, Helsingør, Helsingborg and Landskrona. Slow days, warm stops, family around them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#journey">Skip to the itinerary</a>
+<div aria-hidden="true" class="ambient"></div>
 
-<nav id="topnav" aria-label="Sections">
-  <a class="brand" href="#cover">C &amp; K <span>· Christmas 2026</span></a>
-  <div class="links">
-    <a href="#journey">Journey</a>
-    <a href="#day-23">23</a>
-    <a href="#day-24">24</a>
-    <a href="#day-25">25</a>
-    <a href="#day-26">26</a>
-    <a href="#day-27">27</a>
+<header class="topbar">
+  <a aria-label="Carol and Kaylan home" class="brand" href="#home"><span class="brand-icon">≈</span> C &amp; K<span class="brand-sub">CHRISTMAS EDITION / 01</span></a>
+  <nav aria-label="Main">
+    <a href="#flights">Flights</a>
+    <a href="#journey">The week</a>
     <a href="#stays">Stays</a>
-    <a href="#notes">Notes</a>
-  </div>
-  <div id="progress" aria-hidden="true"></div>
-</nav>
-
-<header id="cover">
-  <div class="cover-photo" role="img" aria-label="Tivoli's Christmas market at night"></div>
-  <div class="cover-shade"></div>
-  <div class="cover-inner">
-    <p class="eyebrow reveal">Copenhagen &nbsp;·&nbsp; Helsingør &nbsp;·&nbsp; Helsingborg &nbsp;·&nbsp; Landskrona</p>
-    <h1 class="reveal">Carol &amp; Kaylan<br><em>at Christmas</em></h1>
-    <p class="dates reveal">December 23 - 27, 2026 &nbsp;·&nbsp; from Huntsville, Alabama</p>
-    <div id="countdown" class="reveal" aria-live="polite"></div>
-    <a class="scroll-cue reveal" href="#journey" aria-label="Scroll to the journey">Begin the journey<span class="chev"></span></a>
-  </div>
+    <a href="#good-to-know">Field notes</a>
+    <button class="source-button" id="source-open">Sources <span>↗</span></button>
+  </nav>
+  <span class="review"><i></i> CHRISTMAS ITINERARY · DRAFT</span>
 </header>
 
-<main>
-
-<section id="intro" class="sheet">
-  <p class="lede reveal">Mom and Kaylan are flying over from Huntsville for Christmas. The flights are booked - everything else is still being chosen, and they get a say in it. One night in Denmark, two in Sweden, and the ferry across on Christmas Day. I drive the whole way, door to door. Slow days, warm stops, family around them. That's the plan.</p>
-  <div class="facts reveal">
-    <div><span class="k">Travelers</span><span class="v">Carol &amp; Kaylan</span></div>
-    <div><span class="k">Flights</span><span class="v">Booked · land Dec 24, home Dec 27</span></div>
-    <div><span class="k">Driving</span><span class="v">Cory, door to door, the whole trip</span></div>
-    <div><span class="k">Pace</span><span class="v">Easy - Carol sets the speed</span></div>
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="line"></span> ALABAMA ROOTS. A SCANDINAVIAN CHRISTMAS.</p>
+    <h1>Mom &amp; Kaylan.<br/>Christmas<br/><em>on the Sound.</em></h1>
+    <p class="hero-intro">Five days, two countries, one ferry.</p>
+    <p class="hero-description">Mom and Kaylan are flying over from Huntsville for Christmas. The flights are booked, the rest is still being chosen, and they get a say in it. Slow days, warm stops, family around them.</p>
+    <a class="primary" href="#journey">Explore the week <span>↗</span></a>
+    <div id="countdown" class="countdown" aria-live="polite"></div>
+    <div class="hero-foot"><span>COPENHAGEN · HELSINGØR · HELSINGBORG · LANDSKRONA</span><span>23–27 DEC 2026 <b>DRAFT</b></span></div>
+  </div>
+  <div class="island-stage">
+    <div aria-hidden="true" class="orbit"></div>
+    <img alt="Conceptual 3D miniature of a Scandinavian harbor island at Christmas, with warm townhouses, a copper spire and a small ferry" class="island" src="island.webp">
+    <div class="float-card coordinates"><span>THE SOUND / ØRESUND</span><strong>55.67° N, 12.56° E</strong></div>
+    <button class="float-card night-card" id="ferry-link" aria-label="Jump to the ferry day">
+      <span aria-hidden="true" class="record"></span>
+      <div><strong>The crossing</strong><small>HELSINGØR → HELSINGBORG</small></div>
+      <b>20 MIN</b>
+    </button>
+    <div aria-hidden="true" class="coral-orb"></div>
+    <p class="island-label">A CHRISTMAS HARBOR, SOMEWHERE ON THE ØRESUND<small>Concept illustration, the real thing looks better in December light.</small></p>
   </div>
 </section>
 
-<section id="journey" class="sheet">
-  <p class="eyebrow dark reveal">The route</p>
-  <h2 class="reveal">The plan, day by day</h2>
-  <div class="route reveal" id="route"></div>
-  <div id="route-detail" class="route-detail reveal" aria-live="polite"></div>
-</section>
+<div class="intro-strip">
+  <div><span>TRAVELERS</span><strong>Carol &amp; Kaylan</strong><small>Flying over from Huntsville, Alabama</small></div>
+  <div><span>DRIVING</span><strong>Cory, door to door</strong><small>The van the whole trip, no trains, no transfers</small></div>
+  <div><span>PACE</span><strong>Easy</strong><small>Carol sets the speed, every day has a sit-down fallback</small></div>
+</div>
 
-<!-- DAY 1 -->
-<section id="day-23" class="day">
-  <div class="day-grid">
-    <figure class="day-photo reveal" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Christmas_market_at_Tivoli%2C_Copenhagen_%2823309041893%29.jpg/1920px-Christmas_market_at_Tivoli%2C_Copenhagen_%2823309041893%29.jpg')"><figcaption>Tivoli's Christmas market · News Øresund, CC BY 2.0</figcaption></figure>
-    <div class="day-body">
-      <p class="day-num reveal">Day one · Wednesday</p>
-      <h2 class="reveal">December 23 <span class="today-tag" data-day="23">today</span></h2>
-      <p class="day-sub reveal">The travel day - overnight across the Atlantic</p>
-      <ol class="timeline reveal">
-        <li><span class="t">17:30</span><div><b>Wheels up from Nashville.</b> Icelandair, overnight across the Atlantic - dinner in the air, sleep if they can, breakfast over Denmark.</div></li>
-        <li><span class="t">Meanwhile</span><div><b>Home side ready.</b> Beds made, van fueled, plan set. Everything on this side is in place before they board.</div></li>
-      </ol>
-      <div class="note reveal"><b>Worth knowing:</b> the overnight flight lands at 11:45 on Christmas Eve morning - and the plan keeps that first day easy on purpose.</div>
-      <div class="maplinks reveal"><a href="https://www.google.com/maps/search/?api=1&query=Tivoli+Gardens+Copenhagen" target="_blank" rel="noopener">Tivoli on the map</a><a href="#stays">Where they stay</a></div>
+<section class="section flights" id="flights" aria-labelledby="flight-heading">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">ACROSS THE ATLANTIC</p>
+      <h2 id="flight-heading">Follow the flight.</h2>
     </div>
+    <p>The booked flight plan, with a quick way to check for changes before the airport run.</p>
+  </div>
+  <div class="flight-grid">
+    <article class="flight-card">
+      <p class="flight-label">Coming over / Icelandair via Keflavík</p>
+      <h3>Nashville to Copenhagen</h3>
+      <div class="flight-times">
+        <div>
+          <b>17:30</b>
+          <time datetime="2026-12-23T17:30:00-06:00">Wed 23 Dec 2026</time>
+          <br>
+          <span>Nashville BNA · CST</span>
+        </div>
+        <span class="flight-arrow" aria-hidden="true">→</span>
+        <div>
+          <b>11:45</b>
+          <time datetime="2026-12-24T11:45:00+01:00">Thu 24 Dec 2026</time>
+          <br>
+          <span>Copenhagen CPH · CET</span>
+        </div>
+      </div>
+      <p class="flight-schedule">Overnight to Keflavík, land 06:10. Then FI204 at 07:30, into CPH Terminal 2 at 11:45. Economy Flex, one 23 kg checked bag each.</p>
+      <div class="flight-actions">
+        <a href="https://www.flightradar24.com/data/flights/fi204" target="_blank" rel="noopener noreferrer">Track FI204 ↗</a>
+        <a href="https://www.icelandair.com/flight-status/" target="_blank" rel="noopener noreferrer">Icelandair flight status ↗</a>
+      </div>
+    </article>
+    <article class="flight-card">
+      <p class="flight-label">Heading home / Icelandair via Keflavík</p>
+      <h3>Copenhagen to Nashville</h3>
+      <div class="flight-times">
+        <div>
+          <b>12:55</b>
+          <time datetime="2026-12-27T12:55:00+01:00">Sun 27 Dec 2026</time>
+          <br>
+          <span>Copenhagen CPH · CET</span>
+        </div>
+        <span class="flight-arrow" aria-hidden="true">→</span>
+        <div>
+          <b>18:45</b>
+          <time datetime="2026-12-27T18:45:00-06:00">Sun 27 Dec 2026</time>
+          <br>
+          <span>Nashville BNA · CST</span>
+        </div>
+      </div>
+      <p class="flight-schedule">FI205 from Terminal 2 at 12:55, land Keflavík 15:25. Then FI825 at 17:10, into Nashville 18:45. Economy Flex, one 23 kg checked bag each.</p>
+      <div class="flight-actions">
+        <a href="https://www.flightradar24.com/data/flights/fi205" target="_blank" rel="noopener noreferrer">Track FI205 ↗</a>
+        <a href="https://www.flightradar24.com/data/flights/fi825" target="_blank" rel="noopener noreferrer">Track FI825 ↗</a>
+      </div>
+    </article>
+  </div>
+  <p class="flight-note">Times are the booked local times from the ticket, not live estimates. Tracking opens on Flightradar24 in a new tab, pick the right date there. Use the airline or airport for final travel updates.</p>
+</section>
+
+<section class="journey section" id="journey">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">THE WEEK / YOUR OWN TEMPO</p>
+      <h2>A plan with<br/><em>breathing room.</em></h2>
+    </div>
+    <p>A loose plan for a Christmas week. Nothing here is locked, we can change things as we go.</p>
+  </div>
+  <div class="journey-layout">
+    <aside aria-label="Choose a day" class="day-rail">
+      <button aria-pressed="true" class="day active" data-day="d23"><span>01</span><div><small>WEDNESDAY / 23 DEC</small><strong>Wheels up.</strong></div><b>↗</b></button>
+      <button aria-pressed="false" class="day" data-day="d24"><span>02</span><div><small>THURSDAY / 24 DEC</small><strong>Land. Exhale. Christmas Eve.</strong></div><b>↗</b></button>
+      <button aria-pressed="false" class="day" data-day="d25"><span>03</span><div><small>FRIDAY / 25 DEC</small><strong>The crossing is the outing.</strong></div><b>↗</b></button>
+      <button aria-pressed="false" class="day" data-day="d26"><span>04</span><div><small>SATURDAY / 26 DEC</small><strong>Sweden wakes up.</strong></div><b>↗</b></button>
+      <button aria-pressed="false" class="day" data-day="d27"><span>05</span><div><small>SUNDAY / 27 DEC</small><strong>One slow goodbye.</strong></div><b>↗</b></button>
+      <div class="pace-note"><span aria-hidden="true" class="mini-record">◎</span><p>The whole family.<br/><strong>Good food, warm rooms and time together.</strong></p></div>
+    </aside>
+    <div aria-live="polite" class="day-content" id="day-content"></div>
   </div>
 </section>
 
-<!-- DAY 2 -->
-<section id="day-24" class="day alt">
-  <div class="day-grid flip">
-    <figure class="day-photo reveal" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Nyhavn%2C_canal_tour_boats.jpg/1920px-Nyhavn%2C_canal_tour_boats.jpg')"><figcaption>Nyhavn in winter · Wikimedia Commons</figcaption></figure>
-    <div class="day-body">
-      <p class="day-num reveal">Day two · Thursday</p>
-      <h2 class="reveal">December 24 <span class="today-tag" data-day="24">today</span></h2>
-      <p class="day-sub reveal">Land in Copenhagen, then Christmas Eve</p>
-      <ol class="timeline reveal">
-        <li><span class="t">11:45</span><div><b>Land at CPH.</b> Overnight Icelandair from Nashville. Cory is waiting at arrivals with the van; no trains, no dragging bags.</div></li>
-        <li><span class="t">~20 min</span><div><b>Into the city.</b> One hotel near the center for the night. Check in, exhale.</div></li>
-        <li><span class="t">Afternoon</span><div><b>Rest.</b> A real break for Carol after the long flight. Coffee at the hotel, maybe a first look at the lights along Strøget.</div></li>
-        <li><span class="t">Evening</span><div><b>Christmas Eve dinner.</b> Most likely at Cory and Rose's own house - Rose's grandmother's or her aunt's are the other options. The family decides. In Scandinavia the celebration and the gifts happen tonight. If dinner is in Sweden, the van runs them over the bridge - about an hour each way.</div></li>
-      </ol>
-      <div class="note warn reveal"><b>Almost everything is closed.</b> Shops, museums and Tivoli all shut for the 24th in both countries. The day is built around family and the table, not sights.</div>
+<section class="section stays" id="stays">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">WHERE THEY STAY</p>
+      <h2>One roof, or<br/><em>one hotel per city.</em></h2>
     </div>
+    <p>Nothing is booked yet. These are the places on the table, and Mom and Kaylan get a say before anything is reserved.</p>
   </div>
+  <div class="stays-grid">
+    <article class="stay-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDkwNjc1OTU%3D/original/8ad96c57-4ba3-4e7e-85cd-32a2a6c40c51.jpeg?im_w=1200" alt="The modern white villa in Landskrona with its garden terrace" loading="lazy">
+      <div class="stay-body">
+        <p class="stay-tag">THE LEAD / BEST FIT FOR CAROL</p>
+        <h3>Modern villa, Landskrona</h3>
+        <p>Close to the sea and golf. Four bedrooms, six beds, three baths, with a ground-floor bedroom and shower bathroom that work for Carol. Garage and driveway fit the van, self check-in, free cancellation until Dec 23. 13,947 kr total for Dec 24–27, Superhost 4.71.</p>
+        <a href="https://www.airbnb.com/rooms/49067595" target="_blank" rel="noopener noreferrer">See it on Airbnb ↗</a>
+      </div>
+    </article>
+    <article class="stay-card">
+      <div class="stay-body">
+        <p class="stay-tag">CLOSEST TO BUDGET</p>
+        <h3>Borstahusen, near Landskrona</h3>
+        <p>7,701 kr total for Dec 24–27, refundable until Dec 17. Step-free access for Carol is still being confirmed, and that answer comes before anyone books.</p>
+      </div>
+    </article>
+    <article class="stay-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1256633230226547638/original/33bd4376-6870-42f4-b380-2c446e7ea985.jpeg?im_w=1200" alt="The Segerhill living room with a lit Christmas star in the window" loading="lazy">
+      <div class="stay-body">
+        <p class="stay-tag">COUNTRY ALTERNATIVE</p>
+        <h3>Segerhill, Vallåkra</h3>
+        <p>A rural stay about 16 minutes from Landskrona. Five bedrooms, hot tub and garden, free parking, self check-in. 7,170 kr total, rated 4.9. One honest caveat: no ground-floor shower, so it is a weaker fit for Carol.</p>
+        <a href="https://www.airbnb.com/rooms/1256633230226547638" target="_blank" rel="noopener noreferrer">See it on Airbnb ↗</a>
+      </div>
+    </article>
+    <article class="stay-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1784753000806627504/original/0fd0f055-404a-44a3-9f3c-684332b1270f.jpeg?im_w=1200" alt="The wood-burning stove in the Gentofte home" loading="lazy">
+      <div class="stay-body">
+        <p class="stay-tag">UNDER ONE ROOF IN DENMARK</p>
+        <h3>Garden home, Gentofte</h3>
+        <p>A spacious family home on a quiet street north of Copenhagen. Wood-burning stove, garden with covered terrace, parking for the van. Carol gets the ground-floor bedroom with a private toilet. 9,377 kr total for Dec 24–27. The catch: free cancellation ends Nov 24, the soonest deadline of the five.</p>
+        <a href="https://www.airbnb.com/rooms/1784753000806627504" target="_blank" rel="noopener noreferrer">See it on Airbnb ↗</a>
+      </div>
+    </article>
+    <article class="stay-card">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1467195354697263515/original/797fcb40-a635-44f4-b2ae-3dd7e99560ec.jpeg?im_w=1200" alt="The black house at the top of Ven island with the sea behind" loading="lazy">
+      <div class="stay-body">
+        <p class="stay-tag">THE WILDCARD</p>
+        <h3>360° ocean view, Ven island</h3>
+        <p>The dream view: a house at the top of Ven with sea in every direction, a fireplace and the beach below. Sleeps six, Superhost 4.75. Two honest caveats: the van stays on the mainland, Ven is reached by a small passenger ferry, and the beds are upstairs and in the basement, the hardest option for Carol. 18,022 kr total, the priciest of the five, and free cancellation lasts only 24 hours after booking.</p>
+        <a href="https://www.airbnb.com/rooms/1467195354697263515" target="_blank" rel="noopener noreferrer">See it on Airbnb ↗</a>
+      </div>
+    </article>
+    <article class="stay-card">
+      <div class="stay-body">
+        <p class="stay-tag">THE HOTEL FALLBACK</p>
+        <h3>One hotel per city, no switching</h3>
+        <p>If the family splits up instead: one night near central Copenhagen when they land, then a Helsingborg base steps from the ferry terminal, Elite Hotel Marina Plaza is the natural fit. One room with two comfortable beds, flat streets, easy for Carol. Being priced live.</p>
+      </div>
+    </article>
+  </div>
+  <p class="flight-note">Prices and cancellation terms are from the last check in November and can move. Everything gets verified again before anything is booked.</p>
 </section>
 
-<!-- DAY 3 -->
-<section id="day-25" class="day">
-  <div class="day-grid">
-    <figure class="day-photo reveal" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/20190531_Fersea_Tycho_Brahe_Helsingor_0260_%2847981219862%29.jpg/1920px-20190531_Fersea_Tycho_Brahe_Helsingor_0260_%2847981219862%29.jpg')"><figcaption>The Øresundslinjen ferry at Helsingør · arztsamuel, CC BY-SA 2.0</figcaption></figure>
-    <div class="day-body">
-      <p class="day-num reveal">Day three · Friday</p>
-      <h2 class="reveal">December 25 <span class="today-tag" data-day="25">today</span></h2>
-      <p class="day-sub reveal">Christmas Day - the crossing is the outing</p>
-      <ol class="timeline reveal">
-        <li><span class="t">Morning</span><div><b>Late breakfast, no rush.</b> Tivoli opens again today after its Christmas Eve closure - the market is a short stroll from the hotel if anyone wants an hour of lights. Then bags to the van.</div></li>
-        <li><span class="t">~50 min</span><div><b>Drive the coast to Helsingør.</b> Kronborg castle - Hamlet's castle - watches over the harbor where the ferry berths.</div></li>
-        <li><span class="t">20 min</span><div><b>The ferry.</b> The van boards with everyone in it - Cory's clip card covers the car. Twenty minutes across the strait: coffee or lunch on board, seats by the window, elevators between decks.</div></li>
-        <li><span class="t">Steps away</span><div><b>Off the ferry, into the hotel.</b> The Helsingborg base sits right at the terminal - check in, then a quiet Christmas afternoon. Family in Landskrona is about 25 minutes away in the van.</div></li>
-      </ol>
-      <div class="note warn reveal"><b>Meals need a plan.</b> Christmas Day closes restaurants and shops in both countries. Eat on the ferry, at the hotel, or with family. The ferry sails every day; the exact holiday timetable gets confirmed closer to the date.</div>
-      <div class="maplinks reveal"><a href="https://www.oresundslinjen.com/timetable" target="_blank" rel="noopener">Ferry timetable</a><a href="https://www.google.com/maps/search/?api=1&query=Kronborg+Castle" target="_blank" rel="noopener">Kronborg castle</a></div>
+<section class="section notes" id="good-to-know">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">FIELD NOTES</p>
+      <h2>A few useful things.<br/><em>Then back to Christmas.</em></h2>
     </div>
+    <p>Late December on the Øresund, the honest version.</p>
   </div>
-</section>
-
-<!-- DAY 4 -->
-<section id="day-26" class="day alt">
-  <div class="day-grid flip">
-    <figure class="day-photo reveal" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Lund_Cathedral.jpg/1920px-Lund_Cathedral.jpg')"><figcaption>Lund cathedral · Wikimedia Commons</figcaption></figure>
-    <div class="day-body">
-      <p class="day-num reveal">Day four · Saturday</p>
-      <h2 class="reveal">December 26 <span class="today-tag" data-day="26">today</span></h2>
-      <p class="day-sub reveal">Sweden wakes up again</p>
-      <ol class="timeline reveal">
-        <li><span class="t">Option 1</span><div><b>Lund.</b> The 900-year-old cathedral, cobbled old town and cafés. About 45 minutes in the van, mostly flat once there.</div></li>
-        <li><span class="t">Option 2</span><div><b>Malmö.</b> The old town, the castle grounds and the waterfront under Turning Torso. About 50 minutes.</div></li>
-        <li><span class="t">Option 3</span><div><b>Stay close.</b> Helsingborg's harbor walk and old town on foot - or Landskrona's citadel grounds with the family, about 25 minutes in the van.</div></li>
-        <li><span class="t">Evening</span><div><b>Family dinner.</b> Over in Landskrona, about 25 minutes each way, with everyone around the table.</div></li>
-      </ol>
-      <div class="note reveal"><b>For Kaylan:</b> December 26 opens the rea, Sweden's Boxing Day sales - Malmö and Lund both deliver.</div>
-      <div class="maplinks reveal"><a href="https://www.google.com/maps/search/?api=1&query=Lund+Cathedral" target="_blank" rel="noopener">Lund cathedral</a><a href="https://www.google.com/maps/search/?api=1&query=Malm%C3%B6" target="_blank" rel="noopener">Malmö</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- DAY 5 -->
-<section id="day-27" class="day">
-  <div class="day-grid">
-    <figure class="day-photo reveal" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/KronborgCastleDenmarkOct152022_01.jpg/1920px-KronborgCastleDenmarkOct152022_01.jpg')"><figcaption>Kronborg castle from the air · Wikimedia Commons</figcaption></figure>
-    <div class="day-body">
-      <p class="day-num reveal">Day five · Sunday</p>
-      <h2 class="reveal">December 27 <span class="today-tag" data-day="27">today</span></h2>
-      <p class="day-sub reveal">An early start home</p>
-      <ol class="timeline reveal">
-        <li><span class="t">~03:30</span><div><b>Wheels rolling.</b> Out of the Helsingborg hotel while it is still dark - the flight home leaves at 06:25, so the morning is built backward from that.</div></li>
-        <li><span class="t">~1 hr 10</span><div><b>Van to CPH Airport.</b> Over the Øresund Bridge on empty roads. Door to departures, no changes, no stairs.</div></li>
-        <li><span class="t">06:25</span><div><b>Fly home.</b> Icelandair back to Huntsville, landing 18:45 local time. Christmas in two countries, done.</div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section id="stays" class="sheet">
-  <p class="eyebrow dark reveal">Where they stay</p>
-  <h2 class="reveal">One hotel per city, no switching</h2>
-  <p class="lede small reveal">Mom, Kaylan - nothing here is booked yet. These are the places we're looking at, and we want to hear what you two think before anything gets reserved. The idea right now: one hotel in Copenhagen, one in Helsingborg, no moving around. Or we skip the split and put everyone under one roof in one of the homes below.</p>
-  <div class="stay-cols">
-    <div class="stay-col reveal">
-      <h3>Denmark · Dec 24</h3>
-      <div class="stay-card"><div class="stay-body"><b>Copenhagen city</b><p>One hotel near the center for the night they land - flat streets, everything close, easy for Carol after the flight. Tivoli's market reopens on the 25th, a short stroll away, if anyone wants an hour of lights before the ferry. Being priced live now.</p></div></div>
-    </div>
-    <div class="stay-col reveal">
-      <h3>Sweden · Dec 25 &amp; 26</h3>
-      <div class="stay-card"><div class="stay-body"><b>Helsingborg - at the ferry terminal</b><p>Elite Hotel Marina Plaza is the natural fit for the Marina Cory named: the Sweden base sits steps from the ferry berth, so crossing day needs almost no walking with bags. Being priced live now.</p></div></div>
-      <div class="stay-card"><div class="stay-body"><b>Off the list: Quality Hotel Öresund, Landskrona</b><p>Cory's confirmed "Orson" - but with one hotel per city, the Sweden base moves to Helsingborg. Landskrona stays in the plan as family headquarters, about 25 minutes away in the van.</p></div></div>
-    </div>
-  </div>
-  <div class="stay-card reveal" style="margin-top:18px">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDkwNjc1OTU%3D/original/8ad96c57-4ba3-4e7e-85cd-32a2a6c40c51.jpeg?im_w=1200" alt="The modern white villa in Landskrona with its garden terrace" loading="lazy">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDkwNjc1OTU%3D/original/60cd8298-35b7-4b64-8858-0de3c65b8a09.jpeg?im_w=1200" alt="The villa kitchen and dining space" loading="lazy">
-    <div class="stay-body"><b>Or all under one roof: modern villa, Landskrona</b><p>Close to the sea and golf - four bedrooms, six beds, three baths, with a ground-floor bedroom and shower bathroom that work for Carol. Garage and driveway fit the van, self check-in, free cancellation until Dec 23. 13,947 kr total for Dec 24-27 (three nights), Superhost Leotrim 4.71. <a href="https://www.airbnb.com/rooms/49067595" target="_blank" rel="noopener">See it on Airbnb</a></p></div>
-  </div>
-  <div class="stay-card reveal" style="margin-top:18px">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1256633230226547638/original/33bd4376-6870-42f4-b380-2c446e7ea985.jpeg?im_w=1200" alt="The Segerhill living room with a lit Christmas star in the window" loading="lazy">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1256633230226547638/original/1ff93a22-a2f7-4769-951c-60f9625fe23c.jpeg?im_w=1200" alt="The hot tub on the Segerhill deck" loading="lazy">
-    <div class="stay-body"><b>Country alternative: Segerhill, Vallåkra</b><p>A rural stay about 16 minutes from Landskrona - five bedrooms (four beds; a sixth person's bed is unconfirmed), two baths, hot tub and garden, free parking and an EV charger, self check-in, free cancellation before Dec 19. 7,170 kr total for Dec 24-27 (three nights), rated 4.9. <a href="https://www.airbnb.com/rooms/1256633230226547638" target="_blank" rel="noopener">See it on Airbnb</a></p></div>
-  </div>
-  <div class="stay-card reveal" style="margin-top:18px">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1784753000806627504/original/0fd0f055-404a-44a3-9f3c-684332b1270f.jpeg?im_w=1200" alt="The wood-burning stove in the Gentofte home" loading="lazy">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1784753000806627504/original/5867762c-9fb0-4474-a365-3fe65c098ee4.jpeg?im_w=1200" alt="The bright dining and living room in Gentofte" loading="lazy">
-    <div class="stay-body"><b>Under one roof in Denmark: garden home, Gentofte</b><p>A spacious, loved family home on a quiet street north of Copenhagen - wood-burning stove, private garden with covered terrace, full kitchen, washer, free parking for the van. Carol gets the ground-floor bedroom with a big double bed, walk-in closet and private toilet; three more bedrooms downstairs, all with daylight. Sleeps five as standard - a fifth bedroom for a sixth guest can be prepared by arrangement for a small extra fee. New listing, no reviews yet (host of 12 years), free cancellation only until Nov 24, the soonest deadline of the four homes. 9,377 kr total for Dec 24-27, discounted from 11,484 kr. <a href="https://www.airbnb.com/rooms/1784753000806627504" target="_blank" rel="noopener">See it on Airbnb</a></p></div>
-  </div>
-  <div class="stay-card reveal" style="margin-top:18px">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1467195354697263515/original/797fcb40-a635-44f4-b2ae-3dd7e99560ec.jpeg?im_w=1200" alt="The black house at the top of Ven island with the sea behind" loading="lazy">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1467195354697263515/original/c97bece2-44d0-4c8c-8c4a-e25f01057527.jpeg?im_w=1200" alt="The garden and its view over the sea on Ven" loading="lazy">
-    <div class="stay-body"><b>The wildcard: 360&deg; ocean view, Ven island</b><p>The dream view - a house at the top of Ven with sea in every direction, a fireplace, an outdoor kitchen and the beach below. Sleeps six, Superhost 4.75. Two honest caveats: the van stays on the mainland - Ven is reached by a small passenger ferry from Landskrona, and while the island has a bus timed to the ferries, a local taxi and golf carts for rent, getting around in December is still a project. The beds are upstairs and in the basement too - the hardest option for Carol. 18,022 kr total for Dec 24-27, the priciest of the four, and free cancellation lasts only 24 hours after booking. <a href="https://www.airbnb.com/rooms/1467195354697263515" target="_blank" rel="noopener">See it on Airbnb</a></p></div>
-  </div>
-
-</section>
-
-<section id="notes" class="sheet">
-  <p class="eyebrow dark reveal">Good to know</p>
-  <h2 class="reveal">Late December on the Øresund</h2>
   <div class="accordion reveal" id="accordion">
-    <details>
-      <summary>Getting around</summary>
-      <p>Cory drives the ClubLink van door to door the whole trip - airport pickup, every outing, airport drop-off. The only water crossing is the ferry, and the van comes aboard. The Øresund Bridge back to the airport carries a toll. No trains, no transfers, no stairs with bags.</p>
+    <details open>
+      <summary><span>Getting around</span><span>+</span></summary>
+      <p>Cory drives the ClubLink van door to door the whole trip: airport pickup, every outing, airport drop-off. The only water crossing is the ferry, and the van comes aboard. The Øresund Bridge back to the airport carries a toll. No trains, no transfers, no stairs with bags.</p>
     </details>
     <details>
-      <summary>The season and the closures</summary>
-      <p>Expect 0-5°C, often wet or crisp rather than deep snow, and daylight roughly 8:45 to 15:40 - so sights belong to the morning. December 24: shops, museums and Tivoli closed in both countries. December 25: almost everything closed. December 26: shops reopen and Sweden's rea sales begin.</p>
+      <summary><span>The season and the closures</span><span>+</span></summary>
+      <p>Expect 0–5°C, often wet or crisp rather than deep snow, and daylight roughly 8:45 to 15:40, so sights belong to the morning. December 24: shops, museums and Tivoli closed in both countries. December 25: almost everything closed. December 26: shops reopen and Sweden's rea sales begin.</p>
     </details>
     <details>
-      <summary>For Carol</summary>
-      <p>Every leg is step-free - the van, the ferry elevators, the hotels. No sight needs more than a short, flat walk, and every day has a sit-down fallback. Warm layers for the ferry deck; the coffee inside is never far.</p>
+      <summary><span>For Carol</span><span>+</span></summary>
+      <p>Every leg is step-free: the van, the ferry elevators, the hotels. No sight needs more than a short, flat walk, and every day has a sit-down fallback. Warm layers for the ferry deck, the coffee inside is never far.</p>
     </details>
     <details>
-      <summary>Money</summary>
-      <p>Denmark uses kroner (DKK), Sweden uses kronor (SEK). Cards and phones pay for everything on both sides - no cash needed.</p>
+      <summary><span>Money</span><span>+</span></summary>
+      <p>Denmark uses kroner (DKK), Sweden uses kronor (SEK). Cards and phones pay for everything on both sides, no cash needed.</p>
     </details>
   </div>
+</section>
+
+<section class="section ready" id="loose-ends">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">STILL TO CHOOSE</p>
+      <h2>A few loose ends.<br/><em>We will sort them.</em></h2>
+    </div>
+    <p>The open decisions, together. Nothing gets booked until these are settled.</p>
+  </div>
+  <div class="checklist">
+    <div class="check-item"><div><strong>Where everyone sleeps</strong><small>The Landskrona villa leads; Borstahusen is closest to budget. Mom and Kaylan get a say first.</small></div></div>
+    <div class="check-item"><div><strong>Christmas Eve dinner</strong><small>Most likely at Cory and Rose's house, with Rose's grandmother's or her aunt's as the alternatives.</small></div></div>
+    <div class="check-item"><div><strong>Ferry day</strong><small>Christmas Day as the outing, or save the crossing for the 26th.</small></div></div>
+    <div class="check-item"><div><strong>Sweden-first or Denmark-first</strong><small>The current outline is one night Denmark, two in Sweden. Flipping it is still on the table.</small></div></div>
+  </div>
+</section>
+
+<section class="closing">
+  <div aria-hidden="true" class="closing-orbit"></div>
+  <p class="eyebrow">23–27 DECEMBER 2026</p>
+  <h2>The best part<br/>isn't on a map.</h2>
+  <p>Leave room for a long meal, a slow morning and the family all in one room. That is the point of the week.</p>
+  <a class="backtop" href="#home">Back to the top ↑</a>
 </section>
 
 </main>
 
 <footer>
-  <p class="sig">Crafted with love for Carol &amp; Kaylan</p>
-  <p class="fine">Christmas 2026 · Copenhagen, Helsingør, Helsingborg &amp; Landskrona · Draft v2 - every detail can change</p>
+  <span>C &amp; K · CHRISTMAS ON THE SOUND</span>
+  <p>Crafted with love for Carol &amp; Kaylan.<br/>Draft, every detail can change. Copenhagen · Helsingør · Helsingborg · Landskrona.</p>
 </footer>
+
+<dialog id="sources" aria-labelledby="sources-heading">
+  <div class="dialog-head">
+    <h2 id="sources-heading">Details &amp; links.</h2>
+    <button aria-label="Close sources" id="source-close">×</button>
+  </div>
+  <p>The practical links behind the plan. Times, prices and opening hours get checked again closer to the week.</p>
+  <div id="source-list"></div>
+</dialog>
 
 <script src="app.js"></script>
 </body>
